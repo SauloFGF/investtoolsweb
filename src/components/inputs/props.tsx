@@ -1,3 +1,5 @@
+import { ChangeEvent } from "react";
+
 interface IInputUiProps {
     name: string;
     label?: string | number;
@@ -6,7 +8,7 @@ interface IInputUiProps {
     minWidth: string | number;
     maxWidth: string | number;
 
-    onChange?: (event?: React.ChangeEvent<HTMLInputElement>) => void;
+    onChange?: (event: ChangeEvent<HTMLInputElement>) => void;
 }
 
 export default IInputUiProps;

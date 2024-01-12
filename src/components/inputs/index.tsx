@@ -7,18 +7,9 @@ const InputUi: FC<IInputUiProps>  = (props) => {
 
     const containerProps = { width, minWidth, maxWidth};
 
-    const id = `input.fc.${name}`;
-
-    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        onChange && onChange(event);
-    }
-
-
-    return (<jss.container {...containerProps}>
+    return (<jss.container {...containerProps} >
         <jss.label>{label}</jss.label>
-        <jss.default key={id} id={id}
-            onChange={handleChange}
-        />
+        <jss.default name={name} onChange={onChange}/>
     </jss.container>)
 }
 
